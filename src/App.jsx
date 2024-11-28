@@ -1,15 +1,31 @@
-function MyButton() {
+function WelcomeMessage() {
   return (
-
+    <div>
+      Welcome to React Lessons
+    </div>
   )
 }
 
+function LoginMessage() {
+  return (
+    <div>
+      Please login to access React Lessons
+    </div>
+  )
+}
+
+const isLoggedIn = false;
+
 export default function App() {
     return (
-      <div>
-        <h1>Hello React</h1>
-        <MyButton />
-      </div>
+      <>
+        {
+          isLoggedIn
+            ? <WelcomeMessage />
+            : <LoginMessage />
+        }
+      </>
     )
 }
+
 
